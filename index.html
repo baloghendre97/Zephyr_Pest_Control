@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kártevőirtás - Szakszerű Megoldások</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+    <div class="bg-glow secondary"></div>
+
+    <div class="nav-left">
+        <a href="http://www.zephyrkft.hu/" class="btn-back"><i class="fa-solid fa-chevron-left"></i> Vissza a
+            főoldalra</a>
+    </div>
+    <div class="nav-right">
+        <a href="tel:+36302491001" class="cta-button btn-call"><i class="fa-solid fa-phone"></i> Hívjon most!</a>
+    </div>
+
+
+    <main>
+        <section class="hero">
+            <i class="fa-solid fa-bug"></i>
+            <h1 class="glow-white">Kártevőirtás és Mentesítés</h1>
+            <h3>Védje meg otthonát és vállalkozását!</h3>
+            <p class="hero-sub">Professzionális kártevőirtás, szakszerű rágcsáló- és rovarmentesítés, valamint országos
+                lefedettségű szúnyoggyérítés a legmodernebb technológiákkal.</p>
+            <a href="#ajanlatkeres" class="cta-button hero-cta">ÁRAJÁNLATOT KÉREK</a>
+        </section>
+
+        <!-- Pests Grid in Strict Order of text.txt -->
+        <div class="grid">
+            <!-- 1. Egér -->
+            <article class="card" style="background-image: url('images/mouse.jpg');" onclick="openPestModal('egér')">
+                <div class="card-content">
+                    <h3>Egérirtás</h3>
+                    <p>Előfordulásra utaló jelek: ürülék, rágás- és lábnyom. Búvóhelyei: padlás, mennyezet fölött.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 2. Patkány -->
+            <article class="card" style="background-image: url('images/rat.jpg');" onclick="openPestModal('patkány')">
+                <div class="card-content">
+                    <h3>Patkányirtás</h3>
+                    <p>A patkányirtás előtt a teljes területet felmérjük és elvégezzük a szükséges kezelést.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 3. Csótány -->
+            <article class="card" style="background-image: url('images/cockroach.jpg');"
+                onclick="openPestModal('csótány')">
+                <div class="card-content">
+                    <h3>Csótányirtás</h3>
+                    <p>A csótányirtás három fázisa: 1. előkészítés, 2. végrehajtás, 3. utóellenőrzés.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 4. Ágyi Poloska -->
+            <article class="card" style="background-image: url('images/bedbug.jpg');"
+                onclick="openPestModal('poloska')">
+                <div class="card-content">
+                    <h3>Ágyi poloskairtás</h3>
+                    <p>Reziduális hatású folyékony ágyi poloskairtószerrel kezeljük az összes rejtekhelyet.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 5. Darázs -->
+            <article class="card" style="background-image: url('images/wasp.jpg');" onclick="openPestModal('darázs')">
+                <div class="card-content">
+                    <h3>Darázsirtás</h3>
+                    <p>A darázsirtás különös óvatosságot igényel, minden esetben bízza tapasztalt szakemberre!</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 6. Legyek -->
+            <article class="card" style="background-image: url('images/fly.jpg');" onclick="openPestModal('legyek')">
+                <div class="card-content">
+                    <h3>Légyirtás</h3>
+                    <p>Házi légy, döglégy, zengő légy gyérítése korszerű technológiai eljárásokkal.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 7. Szúnyog -->
+            <article class="card" style="background-image: url('images/mosquito.jpg');"
+                onclick="openPestModal('szúnyog')">
+                <div class="card-content">
+                    <h3>Szúnyogirtás</h3>
+                    <p>Földi kémiai szúnyogirtás és biológiai lárvairtás a nyugodt nyári estékért.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 8. Muslinca -->
+            <article class="card" style="background-image: url('images/muslinca.jpg');"
+                onclick="openPestModal('muslinca')">
+                <div class="card-content">
+                    <h3>Muslinca irtás</h3>
+                    <p>Gyümölcslégy elleni védekezés célzott irtószeres kezeléssel és megelőzéssel.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 9. Hangyák -->
+            <article class="card" style="background-image: url('images/ant.jpg');" onclick="openPestModal('hangyák')">
+                <div class="card-content">
+                    <h3>Hangyairtás</h3>
+                    <p>Fáraóhangya és Házi hangya irtása speciális csalétekkel és géles technológiával.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 10. Bolhák -->
+            <article class="card" style="background-image: url('images/flea.jpg');" onclick="openPestModal('bolhák')">
+                <div class="card-content">
+                    <h3>Bolhairtás</h3>
+                    <p>Macskabolha és emberbolha elleni mentesítés az ingatlan teljes területén.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+
+            <!-- 11. Pók -->
+            <article class="card" style="background-image: url('images/spider.jpg');" onclick="openPestModal('pók')">
+                <div class="card-content">
+                    <h3>Pókirtás</h3>
+                    <p>Ingatlanon belüli és külső falfelületi pókirtás hosszútávú hatást biztosító permetezéssel.</p>
+                    <span class="btn-details">Részletek →</span>
+                </div>
+            </article>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section-wrapper" id="ajanlatkeres">
+            <h2 class="section-title">Lépjen velünk kapcsolatba</h2>
+            <div class="contact-container">
+                <!-- Left Info -->
+                <div class="contact-card">
+                    <div class="form-title">
+                        <i class="fa-solid fa-address-card" style="color:var(--primary)"></i>
+                        Cégadatok és Elérhetőségek
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-building"></i></div>
+                        <div>
+                            <h5>Cégnév:</h5>
+                            <p>"ZEPHYR" Kereskedelmi és Szolgáltató Kft.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h5>Cím:</h5>
+                            <p>6000 Kecskemét, Tatár sor 18.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h5>Telefonszám:</h5>
+                            <p>+36 30 249 1001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h5>Email:</h5>
+                            <p>minosegugy@zephyrkft.hu</p>
+                        </div>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="opening-hours">
+                        <h4><i class="fa-solid fa-clock" style="color:var(--primary)"></i> Nyitvatartás</h4>
+                        <div class="opening-list">
+                            <div><span>Hétfő - Péntek:</span> <span>07:30 - 16:00</span></div>
+                            <div><span>Pénztár / Árukiadás:</span> <span>07:30 - 15:30</span></div>
+                            <div><span>Szombat - Vasárnap:</span> <span>Zárva</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="contact-card">
+                    <div class="form-title">
+                        <i class="fa-solid fa-paper-plane" style="color:var(--primary)"></i>
+                        Kérjen ajánlatot
+                    </div>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Név / Cégnév</label>
+                            <input type="text" placeholder="Adja meg a nevét...">
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail cím</label>
+                            <input type="email" placeholder="pelda@email.hu">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefonszám</label>
+                            <input type="tel" placeholder="+36 30 123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label>Üzenet / Ajánlatkérés részletei</label>
+                            <textarea rows="5"
+                                placeholder="Miben segíthetünk? Kérjük írja le a kártevő típusát és a területét..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button btn-submit">DÍJMENTES AJÁNLATOT KÉREK</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-card">
+                <div class="map-title">
+                    <i class="fa-solid fa-map-location-dot" style="color:var(--primary)"></i>
+                    Térkép
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.341490263628!2d19.668255077161!3d46.90365897116139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4743da75274b713f%3A0xecfb8f8901d4535b!2sZephyr%20Kft.!5e0!3m2!1shu!2shu!4v1712579000000!5m2!1shu!2shu"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="pestModal" class="modal">
+        <div class="modal-container">
+            <button class="close-btn" onclick="closePestModal()">&times;</button>
+            <div class="modal-left">
+                <img id="modalImg" src="" alt="Pest">
+            </div>
+            <div class="modal-right">
+                <h2 id="modalTitle"></h2>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-notice">Cégünk teljes körű felelősségbiztosítással rendelkezik a kártevőirtási munkákra az
+            ország egész területén.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
